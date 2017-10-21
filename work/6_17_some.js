@@ -42,3 +42,16 @@ var names = [
 names.some(function(name) {
     return name.length > 4;
 });
+
+
+// Quiz - given array of users, return true if any is pending
+
+var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' }
+];
+
+var inProgress = requests.some(function(request) {
+    return request.status === 'pending';
+});
